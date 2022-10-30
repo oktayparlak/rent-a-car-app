@@ -15,6 +15,10 @@ app.use(express.static('public'));
 
 /**apis */
 app.get('/', pageController.getAllCars);
+app.get('/about', pageController.getAboutPage);
+app.get('/service', pageController.getServicePage);
+app.get('/pricing', pageController.getPricePage);
+app.get('/contact', pageController.getContactPage);
 
 app.listen(port, () => {
   console.log(`App started on port ${port}`);
