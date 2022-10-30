@@ -26,4 +26,4 @@ exports.getContactPage = (req, res) => {
   res.render('contact', {
     page_name: 'contact',
   });
-}
+};
