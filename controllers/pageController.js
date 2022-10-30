@@ -1,4 +1,4 @@
-exports.getAllCars = (req, res) => {
+exports.getIndexPage = (req, res) => {
   res.render('index', {
     page_name: 'index',
   });
