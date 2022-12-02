@@ -1,22 +1,21 @@
 const express = require('express');
-const mongoose = require('mongoose');
-
+const dotenv = require('dotenv');
 const pageRoute = require('./routes/pageRoute');
+const database = require('./controllers/databaseController');
 
 const app = express();
 
 const port = process.env.port || 8081;
 
 /**Connect DB */
-mongoose.connect('mongodb://localhost/rentacar-db').then(() => {
-  console.log('DB Connection Successfuly');
-});
+database.connectDb();
 
 /**Template Engine */
 app.set('view engine', 'ejs');
 
 /**Middlewares */
 app.use(express.static('public'));
+//dotenv.config();
 
 /**Routes */
 app.use('/', pageRoute);
