@@ -21,5 +21,5 @@ app.use(express.static('public'));
 app.use('/', pageRoute);
 
 app.listen(port, () => {
-  console.log(`App started on port ${port}`);
+  console.log(`App started on port http://localhost:${port}`);
 });
