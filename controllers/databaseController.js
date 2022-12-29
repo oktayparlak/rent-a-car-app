@@ -1,21 +1,26 @@
 const { Client } = require('pg');
+const env = require('dotenv');
+
+env.config();
 
 exports.connectDb = async () => {
   try {
     const client = new Client({
-      user: "postgres",//process.env.PGUSER,
-      host: "localhost",//process.env.PGHOST,
-      database: "rentACarJs",//process.env.PGDATABASE,
-      password: "12345",//process.env.PGPASSWORD,
-      port: 5432//process.env.PGPORT,
+      user: process.env.PGUSER,
+      host: process.env.PGHOST,
+      database: process.env.PGDATABASE,
+      password: process.env.PGPASSWORD,
+      port: process.env.PGPORT,
     });
 
     await client.connect();
-    //const res = await client.query('SELECT * FROM some_table');
     console.log('Database connected!');
-    //console.log(res);
-    await client.end();
+    //await client.end();
   } catch (error) {
     console.log(error);
   }
 };
+
+exports.getAllCars = (req, res) => {
+  
+}
