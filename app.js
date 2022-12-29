@@ -2,8 +2,9 @@ const express = require('express');
 const bodyparser = require('body-parser');
 
 const pageRoute = require('./routes/pageRoute');
+const carRoute = require('./routes/carRoute');
+
 const database = require('./controllers/databaseController');
-const carController = require('./controllers/carController');
 
 const app = express();
 
@@ -26,9 +27,7 @@ app.use(
 
 /**Routes */
 app.use('/', pageRoute);
-app.get('/cars', carController.getAllCars);
-app.get('/car-single', carController.getACar);
-
+app.use('/car', carRoute);
 
 app.listen(port, () => {
   console.log(`App started on port http://localhost:${port}`);

@@ -14,13 +14,9 @@ exports.connectDb = async () => {
     });
 
     await client.connect();
-    console.log('Database connected!');
+    console.log('Connected to database!');
     //await client.end();
   } catch (error) {
     console.log(error);
   }
 };
-
-exports.getAllCars = (req, res) => {
-  
-}

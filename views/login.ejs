@@ -1,0 +1,35 @@
+<%- include('partials/_header'); %>
+
+<%- include('partials/_navigation'); %>
+
+<!-- ******************************************************************************************************** -->
+<style>
+    body {
+        font-family: Calibri, Helvetica, sans-serif;
+        background-color: pink;
+    }
+    button {
+        background-color: #4CAF50;
+
+    }
+</style>
+<center> ><h1> Student Login Form</h1></center>
+<form>
+    <div class="contanier">
+        <label>Username : </label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+        <label>Password : </label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+        <button type="submit">Login</button>
+        <button type="button" class="cancelbtn"> Cancel</button>
+        Forgot <a href="#"> password? </a>
+    </div>
+</form>
+
+
+
+
+
+<!-- ******************************************************************************************************** -->
+
+<%- include('partials/_footer'); %>

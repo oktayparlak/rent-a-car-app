@@ -27,3 +27,15 @@ exports.getContactPage = (req, res) => {
     page_name: 'contact',
   });
 };
+
+exports.getLoginPage = (req, res) => {
+  res.render('login', {
+    page_name: 'login',
+  });
+};
+
+exports.getAllCars = (req, res) => {
+  res.render('cars', {
+    page_name: 'cars',
+  });
+};
