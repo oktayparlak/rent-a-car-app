@@ -39,3 +39,15 @@ exports.getAllCars = (req, res) => {
     page_name: 'cars',
   });
 };
+
+exports.getRegisterPage = (req, res) => {
+  res.render('register', {
+    page_name: 'register',
+  });
+};
+
+exports.getAddCarPage = (req, res) => {
+  res.render('addcar', {
+    page_name: 'addcar',
+  });
+};

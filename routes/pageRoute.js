@@ -10,5 +10,7 @@ router.route('/pricing').get(pageController.getPricePage);
 router.route('/contact').get(pageController.getContactPage);
 router.route('/cars').get(pageController.getAllCars);
 router.route('/login').get(pageController.getLoginPage);
+router.route('/register').get(pageController.getRegisterPage);
+router.route('/addcar').get(pageController.getAddCarPage);
 
 module.exports = router;
