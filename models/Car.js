@@ -1,27 +1,35 @@
-const Car = new Car({
+import { Sequelize } from 'sequelize';
+import { sequelize } from '../database';
+
+const Car = sequelize.define('cars', {
+  car_id: {
+    type: Sequelize.INTEGER,
+    primaryKey: true,
+    unique: true,
+  },
   car_brand: {
-    type: String,
+    type: Sequelize.STRING,
   },
   car_model: {
-    type: String,
+    type: Sequelize.STRING,
   },
   car_mileage: {
-    type: Number,
+    type: Sequelize.INTEGER,
   },
   car_transmission: {
-    type: String,
-    enum: ['manual', 'automatic'],
-    default: 'manual',
+    type: Sequelize.ENUM,
+    values: ['manual', 'automatic'],
+    defaultValue: 'manual',
   },
   car_seats: {
-    type: Number,
+    type: Sequelize.INTEGER,
   },
   car_fuel: {
-    type: String,
-    enum: ['petrol', 'diesel', 'LPG'],
-    default: 'petrol',
+    type: Sequelize.ENUM,
+    values: ['petrol', 'diesel', 'LPG'],
+    defaultValue: 'petrol',
   },
   car_price_a_day: {
-    type: Number,
+    type: Sequelize.INTEGER,
   },
 });

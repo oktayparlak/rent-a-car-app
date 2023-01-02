@@ -5,14 +5,11 @@ const cors = require('cors');
 const pageRoute = require('./routes/pageRoute');
 const carRoute = require('./routes/carRoute');
 
-const database = require('./database');
-
 const app = express();
 
 const port = process.env.port || 8081;
 
 /**Connect DB */
-database.connectDb();
 
 /**Template Engine */
 app.set('view engine', 'ejs');
